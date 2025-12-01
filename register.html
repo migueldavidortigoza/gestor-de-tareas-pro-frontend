@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container auth-container">
+
+        <h1>🧾 Crear cuenta</h1>
+
+        <form id="form-register">
+            <input type="text" id="reg-nombre" placeholder="Nombre completo" required>
+            <input type="email" id="reg-email" placeholder="Email" required>
+            <input type="password" id="reg-pass" placeholder="Contraseña" required>
+            <button type="submit">Registrarme</button>
+        </form>
+
+        <p id="reg-mensaje" style="margin-top:10px; font-size:0.9rem;"></p>
+
+        <p style="margin-top:10px; font-size:0.9rem;">
+            ¿Ya tenés cuenta?
+            <a href="login.html">Iniciá sesión</a>
+        </p>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

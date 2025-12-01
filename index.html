@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas PRO ULTRA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>📝 Gestor de Tareas PRO ULTRA</h1>
+
+        <button id="btn-logout" class="secondary" style="margin-bottom: 12px;">
+            🚪 Cerrar sesión 
+        </button>
+
+        
+        <div class="top-bar">
+            <form id="form-tarea" class="form-tarea">
+                <input type="text" id="titulo" placeholder="Titulo de la tarea" required>
+                <input type="text" id="descripcion" placeholder="Descripcion (opcional)">
+
+                <select id="prioridad">
+                    <option value="Alta">Alta</option>
+                    <option value="Media" selected>Media</option>
+                    <option value="Baja">Baja</option>
+                </select>
+
+                <button type="submit">agregar Tarea</button>
+            </form>
+        </div>
+
+        <div class="barra-herramientas">
+            <input
+                type="text"
+                id="buscador"
+                placeholder="🔍 Buscar por titulo o descripcion... "
+            >
+
+            <div class="filtros">
+                <span>Filtrar por prioridad:</span>
+                <button class="filtro-btn activo" data-filtro="Todas">Todas</button>
+                <button class="filtro-btn" data-filtro="Alta">Alta</button>           
+                <button class="filtro-btn" data-filtro="Media">Media</button>
+                <button class="filtro-btn" data-filtro="Baja">Baja</button>
+            </div>
+
+            <button id="btn-borrar-completadas" class="danger">
+                🧹 Eliminar tareas completadas
+            </button>
+        </div>
+
+        <h2>📌 Lista de Tareas (arrastrá para reordenar)</h2>
+        <ul id="lista-tareas" class="lista-tareas"></ul>            
+    </div>    
+
+    <!-- Modal para editar tarea -->
+    <div id="modal-editar" class="modal oculto">
+        <div class="modal-contenido">
+            <h3>✏️ Editar tarea</h3>
+            <form id="form-editar">
+                <input type="text" id="editar-titulo" required>
+                <input type="text" id="editar-descripcion">
+                <select id="editar-prioridad">
+                    <option value="Alta">Alta ⭐</option>
+                    <option value="Media">Media 🔹</option>
+                    <option value="Baja">Baja ⚪</option>
+                </select>
+
+                <label class="checklinea">
+                    <input type="checkbox" id="editar-completada">
+                    Marcar como completada
+                </label>
+
+                <div class="modal-botones">
+                    <button type="submit">💾 Guardar cambios</button>
+                    <button type="button" id="btn-cerrar-modal" class="secondary">
+                        ❌ Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
