@@ -44,8 +44,8 @@ El frontend utiliza la siguiente URL base para comunicarse con la API:
 
 ```
 const API_URL = "https://TU-BACKEND-DEPLOY.onrender.com/api/tareas";
-Reemplazar con la URL real una vez que el backend esté desplegado.
 ```
+Reemplazar con la URL real una vez que el backend esté desplegado.
 
 🛠️ Cómo usar el proyecto en local
 
